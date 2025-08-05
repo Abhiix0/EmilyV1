@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
+import { navbarSlide } from '../animations/variants';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,12 +33,15 @@ const Header = () => {
   }, [location.pathname]);
   
   return (
-    <header 
+    <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-vanilla-cream/90 dark:bg-midnight-navy/90 backdrop-blur-md py-3 shadow-md' 
           : 'bg-transparent py-5'
       }`}
+      initial="hidden"
+      animate="visible"
+      variants={navbarSlide}
     >
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
@@ -93,7 +98,7 @@ const Header = () => {
           </nav>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 };
 

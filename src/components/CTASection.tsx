@@ -62,7 +62,7 @@ const CTASection = () => {
             </p>
             <Link 
               to="/chat" 
-              className="inline-flex items-center gap-2 bg-white text-bold-coral px-8 py-4 rounded-full font-semibold transition-all hover:bg-opacity-90 hover:shadow-lg"
+              className="inline-flex items-center gap-2 bg-white text-bold-coral px-8 py-4 rounded-full font-semibold btn-smooth hover:bg-opacity-90"
             >
               <MessageCircle size={20} />
               Start Chatting Now

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { floatingElement } from '../animations/variants';
 
 const HeroSection = () => {
   return (
@@ -76,36 +77,20 @@ const HeroSection = () => {
               {/* Floating elements */}
               <motion.div 
                 className="absolute top-0 right-0 w-14 h-14 bg-peach-blush rounded-full opacity-40"
-                animate={{ 
-                  y: [0, -15, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
+                variants={floatingElement}
+                animate="animate"
               />
               <motion.div 
                 className="absolute bottom-10 left-0 w-10 h-10 bg-bold-coral rounded-full opacity-30"
-                animate={{ 
-                  y: [0, 15, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
+                variants={floatingElement}
+                animate="animate"
+                transition={{ duration: 5 }}
               />
               <motion.div 
                 className="absolute bottom-0 right-20 w-8 h-8 bg-soft-teal rounded-full opacity-40"
-                animate={{ 
-                  y: [0, 10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
+                variants={floatingElement}
+                animate="animate"
+                transition={{ duration: 3 }}
               />
             </motion.div>
           </div>

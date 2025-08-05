@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionTitle from './SectionTitle';
+import { cardHover } from '../animations/variants';
 
 type Testimonial = {
   id: number;
@@ -89,7 +90,7 @@ const Testimonials = () => {
           <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
             <button 
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-white dark:bg-midnight-navy/50 shadow-cozy"
+              className="p-2 rounded-full bg-white dark:bg-midnight-navy/50 shadow-cozy btn-smooth"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="text-warm-gray hover:text-bold-coral transition-colors" />
@@ -110,7 +111,13 @@ const Testimonials = () => {
                   opacity: { duration: 0.2 }
                 }}
               >
-                <div className="card px-8 py-12 text-center">
+                <motion.div 
+                  className="card px-8 py-12 text-center"
+                  initial="rest"
+                  whileHover="hover"
+                  animate="rest"
+                  variants={cardHover}
+                >
                   <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 border-2 border-peach-blush">
                     <img 
                       src={testimonials[current].image} 
@@ -129,7 +136,7 @@ const Testimonials = () => {
                   
                   <h4 className="font-heading font-semibold">{testimonials[current].name}</h4>
                   <p className="text-warm-gray dark:text-warm-gray/80 text-sm">{testimonials[current].role}</p>
-                </div>
+                </motion.div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -137,7 +144,7 @@ const Testimonials = () => {
           <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10">
             <button 
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-white dark:bg-midnight-navy/50 shadow-cozy"
+              className="p-2 rounded-full bg-white dark:bg-midnight-navy/50 shadow-cozy btn-smooth"
               aria-label="Next testimonial"
             >
               <ChevronRight className="text-warm-gray hover:text-bold-coral transition-colors" />
