@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Brain, HeartHandshake, Sparkles, Lightbulb } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
+import { cardHover } from '../animations/variants';
 
 const AboutPage = () => {
   return (
@@ -24,7 +25,13 @@ const AboutPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="card">
+            <motion.div 
+              className="card"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={cardHover}
+            >
               <h3 className="text-2xl font-semibold mb-4">Emily's Mission</h3>
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="md:w-2/3">
@@ -41,9 +48,15 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="card">
+            <motion.div 
+              className="card"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={cardHover}
+            >
               <h3 className="text-2xl font-semibold mb-4">Emily's Purpose</h3>
               <div className="flex flex-col md:flex-row-reverse gap-8">
                 <div className="md:w-2/3">
@@ -63,9 +76,15 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="card">
+            <motion.div 
+              className="card"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={cardHover}
+            >
               <h3 className="text-2xl font-semibold mb-4">How Emily Works</h3>
               <div className="flex flex-col md:flex-row-reverse gap-8">
                 <div className="md:w-2/3">
@@ -82,9 +101,15 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="card">
+            <motion.div 
+              className="card"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={cardHover}
+            >
               <h3 className="text-2xl font-semibold mb-4">Core Values</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                 <div className="text-center">
@@ -115,9 +140,15 @@ const AboutPage = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="bg-gradient-to-r from-soft-teal to-peach-blush p-1 rounded-2xl">
+            <motion.div 
+              className="bg-gradient-to-r from-soft-teal to-peach-blush p-1 rounded-2xl"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              variants={cardHover}
+            >
               <div className="bg-vanilla-cream dark:bg-midnight-navy rounded-xl p-8 text-center">
                 <div className="w-16 h-16 rounded-full bg-white dark:bg-midnight-navy/80 flex items-center justify-center mx-auto mb-6 shadow-cozy">
                   <Sparkles size={28} className="text-bold-coral" />
@@ -126,11 +157,11 @@ const AboutPage = () => {
                 <p className="max-w-2xl mx-auto mb-6">
                   Emily is constantly learning and evolving. Your interactions help her grow more insightful, empathetic, and helpful every day.
                 </p>
-                <a href="#" className="btn-primary inline-block">
+                <a href="#" className="btn-primary btn-smooth inline-block">
                   Start Chatting with Emily
                 </a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

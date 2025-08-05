@@ -37,6 +37,10 @@
     @apply btn border-2 border-midnight-navy/20 dark:border-vanilla-cream/20 hover:border-bold-coral hover:text-bold-coral dark:hover:border-bold-coral dark:hover:text-bold-coral;
   }
   
+  .btn-smooth {
+    @apply transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-md;
+  }
+  
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
