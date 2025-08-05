@@ -51,7 +51,7 @@ She isn’t loud. She’s just *there*, like calm coffee shop jazz in a storm.
 
 ```bash
 # Clone the repo
-git clone https://github.com/cp-coder77/Emilyv1.git
+git clone https://github.com/Abhiix0/Emilyv1.git
 
 # Install dependencies
 cd Emilyv1
