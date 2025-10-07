@@ -1,6 +1,6 @@
 # ✨ Emily – Your Emotionally Intelligent Chat Companion
 
-Welcome to **Emily**, your cozy, thoughtful, AI-powered chat assistant—built with Gemini and React to bring emotionally intelligent conversations right to your screen. She’s warm, responsive, curious, and smarter than your average chatbot. 🧠💬
+Welcome to **Emily**, your cozy, thoughtful, AI-powered chat assistant—built with Gemini and React to bring emotionally intelligent conversations right to your screen. She’s warm, responsive, curious, and smarter than your average chatbot. 
 
 ---
 
